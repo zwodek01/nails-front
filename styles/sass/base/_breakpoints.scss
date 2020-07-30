@@ -1,0 +1,21 @@
+@import 'variables';
+
+@mixin breakpoint($size) {
+  @if $size == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}

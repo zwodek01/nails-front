@@ -1,0 +1,17 @@
+//TAILWINDCSS
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+//BASE
+@import "base/helpers";
+@import "base/reset";
+@import "base/variables";
+@import "base/breakpoints";
+
+
+//COMPONENTS
+@import "components/common/styles/hamburger";
+
+//LAYOUT
+@import "components/layout/styles/navigation";

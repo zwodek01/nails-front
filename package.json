@@ -1,0 +1,41 @@
+{
+  "author": "Mateusz Zawadzki",
+  "name": "nails-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-on-netlify"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-inline-react-svg": "1.1.0",
+    "classnames": "2.2.6",
+    "express": "^4.17.1",
+    "next": "9.2.0",
+    "next-on-netlify": "^2.0.0",
+    "next-routes": "^1.4.2",
+    "node-sass": "^4.13.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "tailwindcss": "^1.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.5.1",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "husky": "1.3.1",
+    "lint-staged": "8.1.5",
+    "nodemon": "^2.0.4",
+    "prettier": "1.16.4",
+    "prop-types": "^15.7.2",
+    "react-use": "15.3.0"
+  }
+}

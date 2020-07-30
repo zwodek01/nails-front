@@ -1,0 +1,14 @@
+@import "breakpoints";
+
+.hidden-down-md {
+  display: none !important;
+  @include breakpoint(md) {
+    display: flex !important;
+  }
+}
+
+.hidden-up-md {
+  @include breakpoint(md) {
+    display: none !important;
+  }
+}
