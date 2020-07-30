@@ -18,3 +18,9 @@ yarn-error.log*
 .env
 .env.production
 /server/config.js
+
+#netlify-build
+/out_functions
+/out_publish
+./out_publish
+./out_functions
