@@ -21,6 +21,10 @@
   color: $color-gold !important;
 }
 
+.border-bottom-gray {
+  border-bottom: 1px solid $color-gray;
+}
+
 .swiper-button-next, .swiper-button-prev {
   top: 65%;
 

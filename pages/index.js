@@ -4,6 +4,7 @@ import Hero from '../components/pages/home/components/hero';
 import WhyMe from '../components/pages/home/components/whyMe';
 import Services from '../components/pages/home/components/services';
 import Reviews from '../components/pages/home/components/reviews';
+import Prices from '../components/pages/home/components/prices';
 
 const Home = () => (
   <Layout>
@@ -11,6 +12,7 @@ const Home = () => (
     <WhyMe />
     <Services />
     <Reviews />
+    <Prices />
   </Layout>
 );
 
