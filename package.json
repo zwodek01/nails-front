@@ -9,6 +9,9 @@
     "postbuild": "next-on-netlify"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-inline-react-svg": "1.1.0",
     "classnames": "^2.2.6",
@@ -17,8 +20,10 @@
     "next-on-netlify": "^2.0.0",
     "next-routes": "^1.4.2",
     "node-sass": "^4.13.1",
+    "nprogress": "^0.2.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-hook-form": "^6.2.0",
     "swiper": "^6.1.1",
     "tailwindcss": "^1.1.4"
   },

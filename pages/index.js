@@ -5,6 +5,7 @@ import WhyMe from '../components/pages/home/components/whyMe';
 import Services from '../components/pages/home/components/services';
 import Reviews from '../components/pages/home/components/reviews';
 import Prices from '../components/pages/home/components/prices';
+import Contact from '../components/pages/home/components/contact';
 
 const Home = () => (
   <Layout>
@@ -13,6 +14,7 @@ const Home = () => (
     <Services />
     <Reviews />
     <Prices />
+    <Contact />
   </Layout>
 );
 

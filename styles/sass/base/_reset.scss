@@ -1,7 +1,17 @@
-button {
+body {
   font-family: $font-montserrat;
+}
 
+button {
   &:focus {
     outline: none;
+  }
+}
+
+input {
+  border: 1px solid $color-gray;
+
+  &:focus {
+    outline-color: $color-gold;
   }
 }
