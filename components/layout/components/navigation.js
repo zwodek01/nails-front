@@ -11,12 +11,12 @@ const Navigation = () => {
   return (
     <section className="navigation">
       <div className="navigation__top-bar">
-        <div className="navigation__top-bar-mobile hidden-up-md">
+        <div className="navigation__top-bar-mobile hidden-up-md px-4">
           <Hamburger isOpen={isOpen} onClick={() => setOpen(!isOpen)} />
           <h2 className="navigation__title">Afra</h2>
           <Kebab />
         </div>
-        <div className="hidden-down-md text-white h-full items-center max-w-screen-xl mx-auto">
+        <div className="hidden-down-md text-white h-full items-center max-w-screen-xl mx-auto px-4">
           <div className="flex mr-40">
             <p className="font-bold mr-3">Telefon:</p>
             <address>
@@ -26,10 +26,9 @@ const Navigation = () => {
             </address>
           </div>
           <div className="flex">
-            <p className="font-bold mr-3">Telefon:</p>
-            <address>
-              <a href="tel:555555555">555-555-555</a>
-            </address>
+            <p className="font-bold mr-3">Godziny otwarcia:</p>
+            <p className="mr-10"> Pon - Pią: 9.00 - 17.00</p>
+            <p className="hidden lg:block">Sob - Nie: NIECZYNNE</p>
           </div>
         </div>
       </div>
@@ -38,7 +37,7 @@ const Navigation = () => {
           'navigation__nav--open': isOpen,
         })}
       >
-        <ul className="max-w-screen-xl mx-auto">
+        <ul className="max-w-screen-xl mx-auto md:px-4">
           <Link href="/">
             <li>
               <a
