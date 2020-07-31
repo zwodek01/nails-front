@@ -9,6 +9,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&family=Roboto&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css"
+            rel="stylesheet"
+          />
           {/*<meta content="/cover.png" property="og:image" />*/}
           {/*<meta*/}
           {/*    content=""*/}

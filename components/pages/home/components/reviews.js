@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/swiper.scss';
 import { reviews } from '../../../../data/reviews';
 import Quote from '../../../../public/icons/quote';
 SwiperCore.use([Navigation]);
