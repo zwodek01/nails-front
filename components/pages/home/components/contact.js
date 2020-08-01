@@ -24,7 +24,7 @@ const Contact = () => {
     if (token) {
       setLoading(true);
       axios
-        .post(`${process.env.URL}/api/send-contact-email`, data)
+        .post(`${process.env.API_URL}/api/send-contact-email`, data)
         .then(res => {
           if (res.data.status === 200) {
             toast.success(
