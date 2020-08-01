@@ -7,15 +7,17 @@ import Reviews from '../components/pages/home/components/reviews';
 import Prices from '../components/pages/home/components/prices';
 import Contact from '../components/pages/home/components/contact';
 
-const Home = () => (
-  <Layout>
-    <Hero />
-    <WhyMe />
-    <Services />
-    <Reviews />
-    <Prices />
-    <Contact />
-  </Layout>
-);
+const Home = () => {
+  return (
+    <Layout>
+      <Hero />
+      <WhyMe />
+      <Services />
+      <Reviews />
+      <Prices />
+      <Contact />
+    </Layout>
+  );
+};
 
 export default Home;

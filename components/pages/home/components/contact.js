@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionContentCard from '../../../common/components/sectionContentCard';
 import { useForm } from 'react-hook-form';
 import Input from '../../../common/components/input';
@@ -6,24 +6,91 @@ import { faAt, faCommentAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 import Button from '../../../common/components/button';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import Loader from 'react-loader-spinner';
+import Reaptcha from 'reaptcha';
 
 const Contact = () => {
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data =>
-    axios
-      .post(
-        'https://test-nails-server.herokuapp.com/api/send-contact-email',
-        data
-      )
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+  const { register, handleSubmit, errors, reset } = useForm();
+  const [isLoading, setLoading] = useState(false);
+  const [token, setToken] = useState(false);
+  const [reaptchaStatus, setReaptchaStatus] = useState('');
+
+  const onVerify = () => {
+    setToken(true);
+  };
+
+  const onSubmit = data => {
+    if (token) {
+      setLoading(true);
+      axios
+        .post(`${process.env.URL}/api/send-contact-email`, data)
+        .then(res => {
+          if (res.data.status === 200) {
+            toast.success(
+              <>
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                <p className="text-center">✔</p>
+                <p className="text-center">{res.data.description}</p>
+              </>
+            );
+            reset();
+          }
+          if (res.data.status !== 200) {
+            toast.error(
+              <>
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                <p className="text-center">❌</p>
+                <p className="text-center">Wystąpił błąd</p>
+                <p className="text-center">{res.data.description}</p>
+              </>
+            );
+          }
+          setLoading(false);
+          setToken(false);
+          reaptchaStatus.reset();
+        })
+        .catch(err => {
+          toast.error(
+            <>
+              {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+              <p className="text-center">❌</p>
+              <p className="text-center">Wystąpił błąd</p>
+              <p className="text-center">Spróbuj jeszcze raz</p>
+            </>
+          );
+          setLoading(false);
+          setToken(false);
+          reaptchaStatus.reset();
+          // eslint-disable-next-line no-console
+          console.log(err);
+        });
+    } else {
+      setLoading(false);
+      toast.error(
+        <>
+          {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+          <p className="text-center">❌</p>
+          <p className="text-center">Wystąpił błąd</p>
+          <p className="text-center">Potwierdź że nie jesteś robotem</p>
+        </>
+      );
+    }
+  };
 
   return (
     <section className="px-4 my-12 max-w-screen-xl mx-auto lg:my-24 xl:flex xl:items-center xl:justify-between">
+      <ToastContainer
+        autoClose={5000}
+        closeOnClick
+        draggable
+        hideProgressBar={false}
+        newestOnTop={false}
+        pauseOnFocusLoss
+        pauseOnHover
+        position="bottom-center"
+        rtl={false}
+      />
       <img
         alt="Mapa"
         className="object-cover map-height m-auto"
@@ -54,24 +121,24 @@ const Contact = () => {
                 },
               }}
             />
-            {/*<Input*/}
-            {/*  classContainer="my-5 md:my-0"*/}
-            {/*  error={errors.surname}*/}
-            {/*  errorMsg={errors.surname?.message}*/}
-            {/*  icon={faUser}*/}
-            {/*  isRequired*/}
-            {/*  label="Nazwisko"*/}
-            {/*  name="surname"*/}
-            {/*  placeholder="Podaj nazwisko"*/}
-            {/*  register={register}*/}
-            {/*  validation={{*/}
-            {/*    required: { value: true, message: 'Pole wymagane' },*/}
-            {/*    pattern: {*/}
-            {/*      value: /^[A-Za-z]+$/i,*/}
-            {/*      message: 'Nieprawidłowy znak',*/}
-            {/*    },*/}
-            {/*  }}*/}
-            {/*/>*/}
+            <Input
+              classContainer="my-5 md:my-0"
+              error={errors.surname}
+              errorMsg={errors.surname?.message}
+              icon={faUser}
+              isRequired
+              label="Nazwisko"
+              name="surname"
+              placeholder="Podaj nazwisko"
+              register={register}
+              validation={{
+                required: { value: true, message: 'Pole wymagane' },
+                pattern: {
+                  value: /^[A-Za-z]+$/i,
+                  message: 'Nieprawidłowy znak',
+                },
+              }}
+            />
             <Input
               classContainer="my-5 md:my-0"
               error={errors.email}
@@ -130,7 +197,27 @@ const Contact = () => {
               }}
             />
           </div>
-          <Button label="Wyślij" type="submit" />
+          <Reaptcha
+            onVerify={onVerify}
+            ref={e => setReaptchaStatus(e)}
+            sitekey={process.env.REPACTCHA_KEY}
+          />
+          <Button
+            disabled={isLoading}
+            label={
+              isLoading ? (
+                <Loader
+                  color="#CCA776"
+                  height={21}
+                  type="TailSpin"
+                  width={41}
+                />
+              ) : (
+                'Wyślij'
+              )
+            }
+            type="submit"
+          />
         </form>
       </div>
     </section>

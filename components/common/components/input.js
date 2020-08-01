@@ -21,7 +21,7 @@ const Input = ({
         <div
           className={classNames(
             {
-              ['text-red-600 font-semibold']: error,
+              ['text-red-600']: error,
             },
             'mb-1'
           )}
@@ -70,9 +70,7 @@ const Input = ({
           />
         )}
       </div>
-      {error && (
-        <div className="text-red-600 mt-1 font-semibold">{errorMsg}</div>
-      )}
+      {error && <div className="text-red-600 mt-1">{errorMsg}</div>}
     </div>
   );
 };

@@ -13,6 +13,14 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css"
             rel="stylesheet"
           />
+          <link
+            href="https://unpkg.com/react-toastify@6.0.8/dist/ReactToastify.css"
+            rel="stylesheet"
+          />
+          <link
+            href="https://cdn.jsdelivr.net/npm/react-loader-spinner@3.1.14/dist/loader/css/react-spinner-loader.css"
+            rel="stylesheet"
+          />
           {/*<meta content="/cover.png" property="og:image" />*/}
           {/*<meta*/}
           {/*    content=""*/}
