@@ -10,12 +10,14 @@ import Contact from '../components/pages/home/components/contact';
 const Home = () => {
   return (
     <Layout>
-      <Hero />
-      <WhyMe />
-      <Services />
-      <Reviews />
-      <Prices />
-      <Contact />
+      <main>
+        <Hero />
+        <WhyMe />
+        <Services />
+        <Reviews />
+        <Prices />
+        <Contact />
+      </main>
     </Layout>
   );
 };
