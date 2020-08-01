@@ -8,8 +8,9 @@ button {
   }
 }
 
-input {
+input, textarea {
   border: 1px solid $color-gray;
+  resize:none;
 
   &:focus {
     outline-color: $color-gold;

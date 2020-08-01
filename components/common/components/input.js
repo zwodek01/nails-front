@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 const Input = ({
   name,
   placeholder,
@@ -12,9 +11,12 @@ const Input = ({
   validation,
   register,
   icon,
+  classContainer,
+  textarea,
+  rows = 4,
 }) => {
   return (
-    <div>
+    <div className={classContainer}>
       {label && (
         <div
           className={classNames(
@@ -28,20 +30,45 @@ const Input = ({
         </div>
       )}
       <div className="relative">
-        {icon && <div className="icon-input">{icon}</div>}
-        <input
-          className={classNames(
-            {
-              ['border border-red-500']: error,
-              ['px-10']: icon,
-            },
-            'w-full h-12 px-3 rounded-md'
-          )}
-          name={name}
-          placeholder={placeholder}
-          ref={register(validation)}
-          type="text"
-        />
+        {icon && (
+          <div className="icon-input">
+            <FontAwesomeIcon
+              className={classNames({
+                ['text-red-500']: error,
+              })}
+              icon={icon}
+            />
+          </div>
+        )}
+        {textarea ? (
+          <textarea
+            className={classNames(
+              {
+                ['border border-red-400 placeholder-red-300']: error,
+                ['px-10']: icon,
+              },
+              'w-full p-3 rounded-md'
+            )}
+            name={name}
+            placeholder={placeholder}
+            ref={register(validation)}
+            rows={rows}
+          />
+        ) : (
+          <input
+            className={classNames(
+              {
+                ['border border-red-400 placeholder-red-300']: error,
+                ['px-10']: icon,
+              },
+              'w-full h-12 px-3 rounded-md'
+            )}
+            name={name}
+            placeholder={placeholder}
+            ref={register(validation)}
+            type="text"
+          />
+        )}
       </div>
       {error && (
         <div className="text-red-600 mt-1 font-semibold">{errorMsg}</div>
@@ -51,13 +78,17 @@ const Input = ({
 };
 
 Input.propTypes = {
-  error: PropTypes.bool,
+  classContainer: PropTypes.string,
+  error: PropTypes.object,
   errorMsg: PropTypes.string,
+  icon: PropTypes.object,
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
-  register: PropTypes.string,
-  validation: PropTypes.string,
+  register: PropTypes.func,
+  rows: PropTypes.number,
+  textarea: PropTypes.bool,
+  validation: PropTypes.object,
 };
 
 export default Input;

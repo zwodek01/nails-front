@@ -29,8 +29,12 @@
   display: flex;
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: 24px;
   transform: translateY(-50%);
+}
+
+.map-height {
+    max-height: 600px;
 }
 
 .swiper-button-next, .swiper-button-prev {
