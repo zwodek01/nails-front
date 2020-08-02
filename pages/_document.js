@@ -21,6 +21,10 @@ class MyDocument extends Document {
             href="https://cdn.jsdelivr.net/npm/react-loader-spinner@3.1.14/dist/loader/css/react-spinner-loader.css"
             rel="stylesheet"
           />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+            rel="stylesheet"
+          />
           {/*<meta content="/cover.png" property="og:image" />*/}
           {/*<meta*/}
           {/*    content=""*/}
