@@ -82,36 +82,34 @@ const Contact = () => {
   };
 
   return (
-    <section className="px-4 my-12 max-w-screen-xl mx-auto lg:my-24">
-      <ToastContainer
-        autoClose={5000}
-        closeOnClick
-        draggable
-        hideProgressBar={false}
-        newestOnTop={false}
-        pauseOnFocusLoss
-        pauseOnHover
-        position="bottom-center"
-        rtl={false}
-      />
-      <div className="xl:flex xl:items-center xl:justify-between">
-        <LazyLoad>
-          <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-            <img
-              alt="Mapa"
-              className="object-cover map-height m-auto"
-              src="/mapa.png"
-            />
-          </ScrollAnimation>
-        </LazyLoad>
-        <div className="my-8">
-          <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+    <ScrollAnimation animateIn="fadeIn" animateOnce>
+      <section className="px-4 my-12 max-w-screen-xl mx-auto lg:my-24">
+        <ToastContainer
+          autoClose={5000}
+          closeOnClick
+          draggable
+          hideProgressBar={false}
+          newestOnTop={false}
+          pauseOnFocusLoss
+          pauseOnHover
+          position="bottom-center"
+          rtl={false}
+        />
+        <div className="xl:flex xl:items-center xl:justify-between">
+          <LazyLoad>
+            <ScrollAnimation animateIn="fadeIn" animateOnce>
+              <img
+                alt="Mapa"
+                className="object-cover map-height m-auto"
+                src="/mapa.png"
+              />
+            </ScrollAnimation>
+          </LazyLoad>
+          <div className="my-8">
             <SectionContentCard
               blackText="Jakieś pytania? Zachęcam do skorzystania z poniższego formularza kontaktowego, aby się ze mną skontaktować. Odpowiem najszybciej jak to możliwe!"
               title="Bądźmy w kontakcie"
             />
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeIn" animateOnce>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="md:grid md:grid-cols-2 md:gap-4 md:my-6">
                 <Input
@@ -233,11 +231,11 @@ const Contact = () => {
                 type="submit"
               />
             </form>
-          </ScrollAnimation>
+          </div>
         </div>
-      </div>
-      <Hours />
-    </section>
+        <Hours />
+      </section>
+    </ScrollAnimation>
   );
 };
 

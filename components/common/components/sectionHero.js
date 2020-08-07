@@ -14,11 +14,13 @@ const SectionHero = ({ title }) => {
       </ScrollAnimation>
       <div className=" border-horizontal-gold">
         <div className="px-4 max-w-screen-xl mx-auto py-6 color-gold">
-          <Link href="/">
-            <a>Strona główna</a>
-          </Link>
-          <span className="mx-6">{'>'}</span>
-          <span className="cursor-pointer">{title}</span>
+          <ScrollAnimation animateIn="fadeIn" animateOnce>
+            <Link href="/">
+              <a>Strona główna</a>
+            </Link>
+            <span className="mx-6">{'>'}</span>
+            <span className="cursor-pointer">{title}</span>
+          </ScrollAnimation>
         </div>
       </div>
     </header>
