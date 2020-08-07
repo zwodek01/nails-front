@@ -10,12 +10,14 @@ SwiperCore.use([Navigation]);
 const Reviews = () => {
   return (
     <section className="my-12 lg:my-24">
-      <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-        <img
-          alt="Zdjęcie paznokci"
-          className="w-full object-cover"
-          src="/image-1.png"
-        />
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
+        <LazyLoad offset={300}>
+          <img
+            alt="Zdjęcie paznokci"
+            className="w-full object-cover"
+            src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-1.png?alt=media&token=952c1185-0925-431f-b2b9-ead1ea53fa34"
+          />
+        </LazyLoad>
       </ScrollAnimation>
       <div className="background-brown">
         <div className="px-4 py-12 max-w-screen-xl mx-auto color-gold">
@@ -30,7 +32,7 @@ const Reviews = () => {
                   <p className="my-6 text-center xs:text-lg md:text-xl">
                     {review.review}
                   </p>
-                  <LazyLoad offset={100}>
+                  <LazyLoad offset={300}>
                     <img
                       alt="Avatar"
                       className="mx-auto my-6"

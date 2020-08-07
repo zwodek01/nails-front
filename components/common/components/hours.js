@@ -4,7 +4,7 @@ import SectionContentCard from './sectionContentCard';
 
 const Hours = () => {
   return (
-    <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+    <ScrollAnimation animateIn="fadeIn" animateOnce >
       <div className="px-4 my-12 max-w-screen-xl mx-auto md:flex md:justify-between lg:my-24">
         <SectionContentCard
           blackText={
