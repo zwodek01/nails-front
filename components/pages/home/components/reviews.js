@@ -15,7 +15,7 @@ const Reviews = () => {
           <img
             alt="Zdjęcie paznokci"
             className="w-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-1.png?alt=media&token=952c1185-0925-431f-b2b9-ead1ea53fa34"
+            src="/image-1.webp"
           />
         </LazyLoad>
       </ScrollAnimation>

@@ -4,7 +4,7 @@ export const reviews = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere.',
     name: 'Ania',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/avatar.png?alt=media&token=59912069-1d19-46ef-a9c8-7170eb0754b8',
+      '/avatar.webp',
     id: 1,
   },
   {
@@ -12,7 +12,7 @@ export const reviews = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere.',
     name: 'Kamila',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/avatar.png?alt=media&token=59912069-1d19-46ef-a9c8-7170eb0754b8',
+      '/avatar.webp',
     id: 2,
   },
   {
@@ -20,7 +20,7 @@ export const reviews = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere.',
     name: 'Beata',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/avatar.png?alt=media&token=59912069-1d19-46ef-a9c8-7170eb0754b8',
+      '/avatar.webp',
     id: 3,
   },
   {
@@ -28,7 +28,7 @@ export const reviews = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra sagittis in posuere.',
     name: 'Emilka',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/avatar.png?alt=media&token=59912069-1d19-46ef-a9c8-7170eb0754b8',
+      '/avatar.webp',
     id: 4,
   },
 ];

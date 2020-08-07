@@ -102,7 +102,7 @@ const Contact = () => {
                 <img
                   alt="Mapa"
                   className="object-cover map-height m-auto"
-                  src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/mapa.png?alt=media&token=708bbe15-2ec1-4fb2-a6ff-49637c653789"
+                  src="/mapa.webp"
                 />
               </LazyLoad>
             </ScrollAnimation>

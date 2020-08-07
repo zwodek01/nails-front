@@ -24,7 +24,7 @@ const Hero = () => {
           <img
             alt="Lakiery"
             className="hidden md:block md:max-w-md lg:max-w-lg xl:max-w-2xl"
-            src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/hero-image.png?alt=media&token=e77e83f1-6421-4299-a192-a2931be20a8c"
+            src="/hero-image.webp"
           />
         </LazyLoad>
       </section>

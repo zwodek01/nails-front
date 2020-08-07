@@ -12,7 +12,7 @@ const WhyMe = () => {
             <img
               alt="Zdjęcie paznokci"
               className=" md:block md:max-w-md lg:max-w-lg xl:max-w-2xl"
-              src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-2.png?alt=media&token=9bd0c61a-a994-4b03-9b20-ecd580648894"
+              src="/image-2.webp"
             />
           </LazyLoad>
         </div>

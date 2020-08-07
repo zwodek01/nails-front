@@ -24,14 +24,14 @@ const oMnie = () => {
                   <img
                     alt="Lakiery"
                     className="sm:max-w-md mx-auto"
-                    src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-3.png?alt=media&token=d9fcdc24-7e3e-429f-aa53-36764c5b4989"
+                    src="/image-3.webp"
                   />
                 </LazyLoad>
                 <LazyLoad offset={200}>
                   <img
                     alt="Lakiery"
                     className="sm:max-w-md mx-auto"
-                    src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-4.png?alt=media&token=c3e86fcc-8676-4f69-a0cc-8ea0e455d92a"
+                    src="/image-4.webp"
                   />
                 </LazyLoad>
               </div>

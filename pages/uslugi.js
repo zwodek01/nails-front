@@ -50,7 +50,7 @@ const Uslugi = () => {
               <img
                 alt="Lakiery"
                 className="my-6 sm:max-w-md lg:max-w-xs mx-auto xl:max-w-md"
-                src="https://firebasestorage.googleapis.com/v0/b/test-86c5c.appspot.com/o/image-5.png?alt=media&token=f2a3344d-bbde-4826-839a-da32d3718b5e"
+                src="/image-5.webp"
               />
             </LazyLoad>
             <div className="text-center">
