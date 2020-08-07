@@ -9,7 +9,7 @@ const WhyMe = () => {
       <div className="flex justify-center flex-1">
         <LazyLoad>
           <ScrollAnimation
-            animateIn="fadeInUp"
+            animateIn="fadeIn"
             animateOnce
             delay={500}
             offset={200}

@@ -11,6 +11,7 @@ import Loader from 'react-loader-spinner';
 import Reaptcha from 'reaptcha';
 import LazyLoad from 'react-lazyload';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Hours from '../../../common/components/hours';
 
 const Contact = () => {
   const { register, handleSubmit, errors, reset } = useForm();
@@ -95,7 +96,7 @@ const Contact = () => {
       />
       <div className="xl:flex xl:items-center xl:justify-between">
         <LazyLoad>
-          <ScrollAnimation animateIn="fadeInUp" animateOnce delay={200}>
+          <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
             <img
               alt="Mapa"
               className="object-cover map-height m-auto"
@@ -235,37 +236,7 @@ const Contact = () => {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="my-12 lg:my-24 md:flex md:justify-between">
-        <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-          <SectionContentCard
-            blackText={
-              <>
-                <p className="my-4">Pon-Pią: 9 – 17</p>
-                <p className="my-4">Sobota: Nieczynne</p>
-                <p className="my-4">Niedziela: Nieczynne</p>
-              </>
-            }
-            title="Godziny otwarcia"
-          />
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
-          <SectionContentCard
-            blackText={
-              <>
-                <p>Bielsk Podlaski</p>
-                <p>ul. Ulica 1</p>
-                <div className="my-4">
-                  <a href="tel:555555555">555 555 555</a>
-                </div>
-                <div className="my-4">
-                  <a href="mailto:info@info.pl">info@info.pl</a>
-                </div>
-              </>
-            }
-            title="Kontakt"
-          />
-        </ScrollAnimation>
-      </div>
+      <Hours />
     </section>
   );
 };

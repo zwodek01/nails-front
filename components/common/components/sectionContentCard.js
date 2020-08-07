@@ -24,8 +24,8 @@ const SectionContentCard = ({ title, mainTitle, blackText, grayText }) => {
 };
 
 SectionContentCard.propTypes = {
-  blackText: PropTypes.string,
-  grayText: PropTypes.string,
+  blackText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  grayText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   mainTitle: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };

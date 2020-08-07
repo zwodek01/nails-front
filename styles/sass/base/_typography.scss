@@ -34,6 +34,33 @@
   }
 }
 
+.titleWithoutBorder {
+  font-family: $font-dancing;
+  font-weight: bold;
+  font-size: 36px;
+  color: $color-black;
+
+  @include breakpoint(xs) {
+    font-size: 46px;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 54px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 60px;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 66px;
+  }
+
+  @include breakpoint(xl) {
+    font-size: 70px;
+  }
+}
+
 .titleNormalFont {
   font-weight: 600;
   font-size: 22px;

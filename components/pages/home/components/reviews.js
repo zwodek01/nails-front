@@ -10,23 +10,19 @@ SwiperCore.use([Navigation]);
 const Reviews = () => {
   return (
     <section className="my-12 lg:my-24">
-      <LazyLoad>
-        <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-          <img
-            alt="Zdjęcie paznokci"
-            className="w-full object-cover"
-            src="/image-1.png"
-          />
-        </ScrollAnimation>
-      </LazyLoad>
+      <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+        <img
+          alt="Zdjęcie paznokci"
+          className="w-full object-cover"
+          src="/image-1.png"
+        />
+      </ScrollAnimation>
       <div className="background-brown">
         <div className="px-4 py-12 max-w-screen-xl mx-auto color-gold">
-          <ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-            <h2 className="title text-center color-gold">Opinie</h2>
-            <div className="flex justify-center">
-              <Quote />
-            </div>
-          </ScrollAnimation>
+          <h2 className="title text-center color-gold">Opinie</h2>
+          <div className="flex justify-center">
+            <Quote />
+          </div>
           <Swiper navigation>
             {reviews.map(review => (
               <SwiperSlide key={review.id}>
