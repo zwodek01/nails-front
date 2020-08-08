@@ -25,6 +25,10 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
             rel="stylesheet"
           />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/react-datepicker/3.1.3/react-datepicker.css"
+            rel="stylesheet"
+          />
           {/*<meta content="/cover.png" property="og:image" />*/}
           {/*<meta*/}
           {/*    content=""*/}

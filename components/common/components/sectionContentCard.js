@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SectionContentCard = ({ title, mainTitle, blackText, grayText }) => {
   return (
-    <div className="mx-auto lg:max-w-lg">
+    <div className="mx-auto lg:max-w-2xl">
       {mainTitle ? (
         <h1 className="title text-center">{title}</h1>
       ) : (

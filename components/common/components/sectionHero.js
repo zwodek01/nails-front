@@ -11,7 +11,11 @@ const SectionHero = ({ title }) => {
         <div className="px-4 max-w-screen-xl mx-auto sm:flex sm:items-center sm:justify-around">
           <h1 className="titleWithoutBorder text-center">{title}</h1>
           <LazyLoad>
-            <img alt="Lakiery" className="sm:max-w-md" src="/hero-image.webp" />
+            <img
+              alt="Lakiery"
+              className="sm:max-w-xs md:max-w-sm lg:max-w-md"
+              src="/hero-image.webp"
+            />
           </LazyLoad>
         </div>
       </ScrollAnimation>
