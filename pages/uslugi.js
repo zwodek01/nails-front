@@ -24,7 +24,7 @@ const Uslugi = () => {
         </ScrollAnimation>
         <Services />
         <ScrollAnimation animateIn="fadeIn" animateOnce>
-          <section className="px-4 my-12 max-w-screen-xl mx-auto lg:my-24 lg:flex lg:items-center">
+          <section className="px-4 my-12 max-w-screen-xl mx-auto lg:my-24 lg:flex lg:items-center lg:justify-between">
             <div className="text-center">
               <h3 className="titleWithoutBorder">Godziny pracy</h3>
               <div className="my-6">
@@ -49,7 +49,7 @@ const Uslugi = () => {
             <LazyLoad offset={200}>
               <img
                 alt="Lakiery"
-                className="my-6 sm:max-w-md lg:max-w-xs mx-auto xl:max-w-md"
+                className="my-6 sm:max-w-md lg:my-0 lg:max-w-xs mx-auto xl:max-w-md"
                 src="/image-5.webp"
               />
             </LazyLoad>
