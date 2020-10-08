@@ -20,7 +20,7 @@
     "dotenv-webpack": "^2.0.0",
     "google-recaptcha-react-component": "^2.1.0",
     "luxon": "^1.24.1",
-    "next": "^9.5.1",
+    "next": "^9.5.4",
     "next-on-netlify": "^2.0.0",
     "next-routes": "^1.4.2",
     "node-sass": "^4.13.1",
